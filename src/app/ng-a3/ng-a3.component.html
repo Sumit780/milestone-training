@@ -1,0 +1,24 @@
+<div class="container">
+    <h4>Marvel Heros</h4>
+    <div class="row" *ngFor="let c of allHero;index as i">
+
+        <div class="col-2 bg-light border text-center m-1">
+            {{c.firstName}}
+        </div>
+        <div class="col-2 bg-light border text-center m-1">
+            {{c.lastName}}
+        </div>
+        <div class="col-2 bg-light border text-center m-1">
+            {{c.age}}
+        </div>
+
+
+        <div class=" fa fa-trash border m-1 text-center" (click)="remove(i)">
+        </div>
+        <div class=" fa fa-check-square border m-1 text-center" data-toggle="tooltip" title="lessondone" (click)="donelesson(i)">
+        </div>
+
+
+    </div>
+
+</div>

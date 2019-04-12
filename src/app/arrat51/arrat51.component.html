@@ -1,0 +1,32 @@
+<div class="container">
+    <label>New Number</label>
+    <input type="text" class="form-control" [(ngModel)]="num" />
+    <button class="btn btn-primary m-1" (click)="addNum()">Add</button>
+    <h4>List of Numbers</h4>
+    <div class="container">
+        <div class="row" *ngFor="let c of numbers;index as i">
+            <div class="col-1 text-center ">
+                {{i+1}}
+            </div>
+            <div class="col-1 bg-light border text-center m-1">
+                {{c}}
+            </div>
+            <div class="col-1 bg-light border text-center m-1">
+                {{evenOdd(c)}}
+            </div>
+            <!-- <div class="col-1 bg-light border text-center m-1">
+                {{square(c)}}
+            </div> -->
+
+            <div class="col-1 fa fa-trash border m-1 text-center" (click)="remove(c)">
+            </div>
+
+        </div>
+        <div>
+            sum:{{sum()}}
+        </div>
+        <div>
+            count of even no:{{count()}}
+        </div>
+    </div>
+</div>

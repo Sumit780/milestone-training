@@ -1,0 +1,77 @@
+<!-- <div class="container text-center">
+    <h2>Marvel Hero Details</h2>
+    <div class="row" *ngFor="let hr of allHero">
+        <div class="col-4 border">
+            {{hr.firstName}}
+
+        </div>
+        <div class="col-4 border">
+            {{hr.lastName}}
+
+        </div>
+        <div class="col-2 border">
+            {{hr.age}}
+        </div>
+
+    </div>
+</div> -->
+
+
+<div class="container ">
+    <h3 class="text-muted  "> Product Data</h3>
+    <div class="row ">
+        <div class="col-1 bg-dark text-center border text-white">
+            Id
+        </div>
+        <div class="col-2 bg-dark  text-center border text-white">
+            Brand
+        </div>
+        <div class="col-1 bg-dark text-center border text-white">
+            Price
+        </div>
+        <div class="col-1 bg-dark text-center border text-white">
+            Qty
+        </div>
+        <div class="col-1 bg-dark text-center border text-white">
+            Value
+        </div>
+        <div class="col-2 bg-dark text-center border text-white">
+        </div>
+    </div>
+    <div class="row " *ngFor="let p of allProduct;index as i">
+
+        <div class="col-1 text-center border">
+            {{p.id}}
+        </div>
+        <div class="col-2 text-center border">
+            {{p.brand}}
+        </div>
+        <div class="col-1 text-center border">
+            {{p.price}}
+        </div>
+        <div class="col-1 text-center border">
+            {{p.quantity}}
+        </div>
+        <div class="col-1 text-center border ">
+            {{p.value}}
+        </div>
+        <div class="col-1 text-center border fa fa-times " (click)="reset(i)">
+        </div>
+        <div class="col-1 text-center border fa fa-check-square" (click)="remove(i)">
+        </div>
+    </div>
+    <div class="text-primary">
+        <div>
+            No of Products:{{number()}}
+        </div>
+        <div>
+            No of product Sold:{{qsold()}}
+        </div>
+        <div>
+            Total Quantity Sold:{{tqty()}}
+        </div>
+        <div>
+            Total Sales Value:{{sales()}}
+        </div>
+    </div>
+</div>
