@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import{ hero } from '../Hero';
-import {product} from '../Product'
+import {Product} from '../Product'
 
 @Component({
   selector: 'app-objects',
@@ -16,7 +16,7 @@ export class ObjectsComponent implements OnInit {
   //   { firstName:'CaptainAmerica',lastName:'Chris Evans',age:32}
   // ];
 
-  allProduct:product[]=[
+  allProduct:Product[]=[
     {id:'P104',brand:'pepsi',price:4,quantity:22,value:88},
     {id:'C124',brand:'coke',price:4,quantity:26,value:104},
     {id:'M155',brand:'Maggie',price:6,quantity:10,value:60},
@@ -44,13 +44,13 @@ export class ObjectsComponent implements OnInit {
       return this.allProduct[i].price * this.allProduct[i].quantity;
      }
      reset(i:number){
-         let st1:product=this.allProduct[i];
+         let st1:Product=this.allProduct[i];
             st1.quantity=0; 
             st1.value=0;       
      }
      remove(i:number){
        console.log("rem"+i);
-       let st1:product=this.allProduct[i];
+       let st1:Product=this.allProduct[i];
        st1.quantity+=1;
 
      }

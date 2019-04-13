@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{ hero } from '../Hero';
+import{ Hero } from '../Hero';
 
 @Component({
   selector: 'app-ng-a3',
@@ -8,7 +8,7 @@ import{ hero } from '../Hero';
 })
 export class NgA3Component implements OnInit {
 
- allHero:hero[]=[
+ allHero:Hero[]=[
     {firstName:'SpiderMan',lastName:'PeterParker',age:19},
     {firstName:'BlackWidow',lastName:'Natasha',age:28},
     {firstName:'IronMan',lastName:'TonyStark',age:34},
@@ -20,7 +20,7 @@ export class NgA3Component implements OnInit {
      this.allHero.splice(i,1);
    }
    donelesson(i:number):void{
-     let st1:hero=this.allHero[i];
+     let st1:Hero=this.allHero[i];
      st1.age=st1.age+1;
      console.log(st1)
 

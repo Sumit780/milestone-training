@@ -1,7 +1,5 @@
-export class Student{
+export class Hero{
      firstName:string;
      lastName:string;
-     age:number;
-   
-
-}
+      age:number; 
+    }

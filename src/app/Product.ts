@@ -1,4 +1,4 @@
-export class product{
+export class Product{
          id:string;
          brand:string;
          price:number;

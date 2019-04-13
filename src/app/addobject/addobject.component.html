@@ -1,0 +1,61 @@
+<div class="container">
+    <label> ID</label>
+    <input type="text" class="form-control" [(ngModel)]="p.id">
+    <label for="">Brand</label>
+    <input type="text" class="form-control" [(ngModel)]="p.brand">
+    <label for="">Price</label>
+    <input type="text" class="form-control" [(ngModel)]="p.price">
+    <br>
+    <div>
+        <button class="btn btn-primary" (click)="add()">Add New Product</button>
+    </div>
+</div>
+<div class="container">
+    <h2>Product Data</h2>
+    <div class="row text-center">
+        <div class="col-1 bg-dark border text-white">ID</div>
+        <div class="col-2 bg-dark border text-white">BRAND</div>
+        <div class="col-1 bg-dark border text-white">PRICE</div>
+        <div class="col-2 bg-dark border text-white">QUANTITY</div>
+        <div class="col-1 bg-dark border text-white">VALUE</div>
+        <div class="col-2 bg-dark border text-white"></div>
+    </div>
+    <div class="row text-center" *ngFor="let p of allProduct;index as i">
+        <div class="col-1 border">
+            {{p.id}}
+        </div>
+        <div class="col-2 border">
+            {{p.brand}}
+        </div>
+        <div class="col-1 border">
+            {{p.price}}
+        </div>
+        <div class="col-2 border">
+            {{p.quantity}}
+        </div>
+        <div class="col-1 border">
+            {{totalvalue(i)}}
+        </div>
+        <div class="col-1 fa fa-times border" data-toggle="tooltip" title="reset" (click)=reset(i)>
+
+        </div>
+        <div class="col-1 fa fa-check-square border" data-toggle="tooltip" title="increment" (click)="increment(i)">
+        </div>
+
+    </div>
+    <div class="text-primary">
+        <div>
+            No of Products:{{totalProduct()}}
+        </div>
+        <div>
+            No of product Sold:{{soldProduct()}}
+        </div>
+        <div>
+            Total Quantity Sold:{{totalQuantitySold()}}
+        </div>
+        <div>
+            Total Sales Value:{{totalSales()}}
+        </div>
+    </div>
+
+</div>
