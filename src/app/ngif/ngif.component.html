@@ -10,7 +10,7 @@
     </p>
 </div> -->
 
-<div class="container">
+<!-- <div class="container">
     <button class="btn btn-primary m-1" (click)="add()">Increase</button>
     <button class="btn btn-primary m-1" (click)="sub()">Decrease</button>
     <p>x=={{x}}</p>
@@ -23,4 +23,31 @@
     <p *ngIf="x<0">
         x is a negative number
     </p>
+</div> -->
+<div class="container">
+    <div>
+        <label>Task1</label>
+        <button class="btn btn-primary m-1" (click)="taskAPass()">pass</button>
+        <button class="btn btn-primary m-1" (click)="taskAFail()">fail</button>
+    </div>
+    <div>
+        <label>Task2</label>
+        <button class="btn btn-primary m-1" (click)="taskBPass()">pass</button>
+        <button class="btn btn-primary m-1" (click)="taskBFail()">fail</button>
+    </div>
+    Joha's Performance
+    <p>TaskA:{{taskA ? "Pass" : "Fail" }}</p>
+    <p>TaskB:{{taskB ? "Pass" : "Fail" }}</p>
+
+    <div *ngIf="taskA && taskB">
+        <p class="text-success"> Grade A: Excellent</p>
+    </div>
+    <div *ngIf="( taskA || taskB ) && !( taskA && taskB )">
+        <p class="text-muted"> Grade B: Good</p>
+    </div>
+    <div *ngIf="!taskA && !taskB">
+        <p class="text-danger"> Grade C: Improvement</p>
+    </div>
+
+
 </div>

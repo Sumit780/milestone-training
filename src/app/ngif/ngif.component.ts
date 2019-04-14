@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-ngif',
   templateUrl: './ngif.component.html',
   styleUrls: ['./ngif.component.css']
 })
 export class NgifComponent implements OnInit {
-  //  v1:boolean=true;
-  //  v2:boolean=true;
-  // check:boolean=true
+//  v1:boolean=true;
+//  v2:boolean=true;
+// check:boolean=true
 //    makeTrue():void{
 //        this.check=true;
 //    }
@@ -30,13 +31,30 @@ export class NgifComponent implements OnInit {
 // this.v2=false;
 // }
 
-  x:number=0;
-  add():void{
-    this.x++;
-  }
-  sub():void{
-    this
-  }
+  // x:number=0;
+  // add():void{
+  //   this.x++;
+  // }
+  // sub():void{
+  //   this
+  // }
+ taskA:boolean=true;
+ taskB:boolean=true;
+ check:boolean=true;
+
+ taskAPass(){
+  this.taskA=true;
+ }
+ taskAFail(){
+  this.taskA=false;
+ }
+ taskBPass(){
+  this.taskB=true;
+ }
+ taskBFail(){
+  this.taskB=false;
+ }
+
   constructor() { }
 
   ngOnInit() {

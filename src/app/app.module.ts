@@ -9,6 +9,7 @@ import { ObjectsComponent } from './objects/objects.component';
 import { NgA3Component } from './ng-a3/ng-a3.component';
 import { AddobjectComponent } from './addobject/addobject.component';
 import { NgifComponent } from './ngif/ngif.component';
+import { CheckboxradioComponent } from './checkboxradio/checkboxradio.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgifComponent } from './ngif/ngif.component';
     ObjectsComponent,
     NgA3Component,
     AddobjectComponent,
-    NgifComponent
+    NgifComponent,
+    CheckboxradioComponent
   ],
   imports: [
     BrowserModule,
