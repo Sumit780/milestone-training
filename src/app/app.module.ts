@@ -10,6 +10,8 @@ import { NgA3Component } from './ng-a3/ng-a3.component';
 import { AddobjectComponent } from './addobject/addobject.component';
 import { NgifComponent } from './ngif/ngif.component';
 import { CheckboxradioComponent } from './checkboxradio/checkboxradio.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownwithobjectsComponent } from './dropdownwithobjects/dropdownwithobjects.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CheckboxradioComponent } from './checkboxradio/checkboxradio.component'
     NgA3Component,
     AddobjectComponent,
     NgifComponent,
-    CheckboxradioComponent
+    CheckboxradioComponent,
+    DropdownComponent,
+    DropdownwithobjectsComponent
   ],
   imports: [
     BrowserModule,

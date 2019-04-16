@@ -1,0 +1,48 @@
+<!-- <div class="container">
+    <label>Course:</label>
+    <select class="form-control" [(ngModel)]="selCourse">
+        <option value=" ">Choose the course...</option>
+    <option *ngFor="let c1 of myCourse"[ngValue]="c1" >{{c1.name}}</option>
+  </select>
+    <div *ngIf="selCourse">
+        <hr> Id:{{selCourse.id}}
+        <br> Name:{{selCourse.name}}
+        <br> desc:{{selCourse.desc}}
+    </div>
+
+</div> -->
+
+<!-- <div class="container">
+    <label> Student</label>
+    <select class="form-control" [(ngModel)]="stud">
+            
+        <option value="">choose the Student Id </option>
+        <option *ngFor="let s of myStudent" [ngValue]="s" >{{s.id}} </option>
+    </select>
+    <hr>
+    <div *ngIf="stud">
+        ID:{{stud.id}}
+        <br> Name:{{stud.name}}
+        <br> City:{{stud.city}}
+        <br> Course:{{stud.course}}
+    </div>
+</div> -->
+
+<div class="container">
+
+    <div class="col-4">
+        <label>Country</label>
+        <select class="form-control" (click)="findIndex()" [(ngModel)]="Country">
+        <option value=""> Select the Country</option>
+        <option *ngFor="let c2 of myCountry">{{c2.name}} </option>
+        
+     </select>
+    </div>
+    <div *ngIf="cities" class="col-4">
+        <label>City</label>
+        <select class="form-control" [(ngModel)]="selectedCity">
+      <option value=""> Select the City</option>
+      <option *ngFor="let c of cities">{{c}} </option>
+    </select>
+    </div>
+</div>

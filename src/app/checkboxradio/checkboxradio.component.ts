@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkboxradio.component.css']
 })
 export class CheckboxradioComponent implements OnInit {
-    //  working:boolean
-    //  gender:boolean
-
+     working:boolean
+     gender:boolean
+    
+    // studying:boolean;
+    
+    // student='working';
     
   constructor() { }
 

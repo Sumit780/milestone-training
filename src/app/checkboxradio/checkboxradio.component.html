@@ -1,3 +1,4 @@
+<!-- Task1 -->
 <!-- <div class="container">
     <div class="row m-1">
         <div class="col">
@@ -18,16 +19,17 @@
     </div>
     <hr> Working:{{working}} <br> Gender:{{gender}}
 </div> -->
+<!-- Task2 -->
 
 <div class="container">
     <div class="row">
         <div class="col">
             <label for="">Provide working details</label>
             <div>
-                <input type="checkbox" value="job">
+                <input type="checkbox" [(ngModel)]="working">
                 <label for="">Working</label>
                 <br>
-                <input type="checkbox" value="course">
+                <input type="checkbox" [(ngModel)]="studying">
                 <label for="">Studying</label>
             </div>
         </div>
@@ -35,25 +37,77 @@
 </div>
 
 <div class="container">
-    <h4>Provide Job Details</h4>
-    <div class="row">
-        <div class="col-3">
-            <label for="">Company Name</label>
-            <input type="text" class="form-control">
-            <br>
-            <label> Designation</label>
-            <input type="text" class="form-control">
+    <div *ngIf="(true == working)">
+        <h4>Provide Job Details</h4>
+        <div class="row">
+            <div class="col-3">
+                <label for="">Company Name</label>
+                <input type="text" class="form-control">
+                <br>
+                <label> Designation</label>
+                <input type="text" class="form-control">
+            </div>
         </div>
     </div>
     <br>
-    <h4>Provide Course Details</h4>
-    <div class="row">
-        <div class="col-3">
-            <label for="">College Name</label>
-            <input type="text" class="form-control">
-            <br>
-            <label> Course</label>
-            <input type="text" class="form-control">
+    <div *ngIf="(true == studying)">
+        <h4>Provide Course Details</h4>
+        <div class="row">
+            <div class="col-3">
+                <label for="">College Name</label>
+                <input type="text" class="form-control">
+                <br>
+                <label> Course</label>
+                <input type="text" class="form-control">
+            </div>
         </div>
     </div>
 </div>
+
+<!-- Task3 -->
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col">
+            <label for="">Provide working details</label>
+            <div>
+                <input type="radio" value="working" name="student" [(ngModel)]="student" [value]='true' [checked]="student">
+                <label for="">Working</label>
+                <br>
+                <input type="radio" value="studying" name="student" [(ngModel)]="student" [value]='false' [checked]="!student">
+                <label for="">Studying</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div *ngIf="student">
+        <h4>Provide Job Details</h4>
+        <div class="row">
+            <div class="col-3">
+                <label for="">Company Name</label>
+                <input type="text" class="form-control">
+                <br>
+                <label> Designation</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div *ngIf="(!student)">
+        <h4>Provide Course Details</h4>
+        <div class="row">
+            <div class="col-3">
+                <label for="">College Name</label>
+                <input type="text" class="form-control">
+                <br>
+                <label> Course</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+
+    </div>
+</div> -->
