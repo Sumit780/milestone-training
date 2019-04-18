@@ -12,7 +12,10 @@ import { NgifComponent } from './ngif/ngif.component';
 import { CheckboxradioComponent } from './checkboxradio/checkboxradio.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { DropdownwithobjectsComponent } from './dropdownwithobjects/dropdownwithobjects.component';
-
+import { EventsComponent } from './events/events.component';
+import { ServiceTaskComponent } from './service-task/service-task.component';
+import {HttpClientModule} from '@angular/common/http';
+import { PostdataComponent } from './postdata/postdata.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,14 +26,18 @@ import { DropdownwithobjectsComponent } from './dropdownwithobjects/dropdownwith
     NgifComponent,
     CheckboxradioComponent,
     DropdownComponent,
-    DropdownwithobjectsComponent
+    DropdownwithobjectsComponent,
+    EventsComponent,
+    ServiceTaskComponent,
+    PostdataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceTaskComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

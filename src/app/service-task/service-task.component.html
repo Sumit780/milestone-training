@@ -1,0 +1,46 @@
+<!--task1 
+  <div class="container">
+    <button class="btn btn-primary" (click)="getData()"> 
+    getData
+  </button>
+    <div>
+        {{strData}}
+    </div>
+
+</div> -->
+<!-- Task2
+<div class="container">
+    <select class="form-control" (click)='findIndex()' [(ngModel)]="value">
+    <option *ngFor="let c of myCourses">{{c.name}}</option>
+  </select>
+    <br>
+    <button class="btn btn-primary" (click)="getData()">
+    getData
+  </button>
+    <div>
+        {{strData}}
+    </div>
+</div> -->
+
+
+
+<div class="container">
+    <button class="btn btn-primary" (click)="getNames()"> Get Names</button>
+    <div>
+        string data:{{strData}}
+    </div>
+    <div *ngFor="let n1 of strData">{{n1}}
+    </div>
+    <div *ngFor="let n2 of strData1">{{n2}}
+    </div>
+    <div *ngFor="let n3 of strData2">{{n3}}
+    </div>
+</div>
+
+
+<!-- <div class="container">
+    <button class="btn btn-primary" (click)="postData()">Post Data</button>
+    <div>
+        {{strData}}
+    </div>
+</div> -->

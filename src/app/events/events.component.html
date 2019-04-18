@@ -1,0 +1,74 @@
+<!-- <div class="container">
+    <input type="text" (keyup)="event('Keyup')" (change)="event('change')" (focus)="event('focus')" (focusout)="event('focusout')" (mouseenter)="event('mouseenter')">
+
+</div> -->
+
+<!-- <div class="container">
+
+    <input type="text" placeholder="Minimium 8 characters" (change)="onChange($event.target.value)">
+    <div *ngIf="totalLength < 8">
+       ength:{{totalLength}} 
+        <p class="text-danger">Minimum Length is 8 character</p>
+    </div> </div>-->
+
+<!-- <div class="container">
+    <label for="">Courses</label>
+    <div>
+        <select class="form-control" (mouseenter)="event('mouseenter')" (focus)="event('focus')" (change)="event('change')" [(ngModel)]="setCousreValue">
+  <option *ngFor="let c of courses">{{c}}</option>
+</select>
+    </div>
+</div> -->
+
+<!-- <div class="container">
+
+    <div class=" row m-1">
+        <div class="col">
+            <input type="checkbox" [(ngModel)]="working" (change)="event(' cb change')" (mouseenter)="event('mouseenter')" (focus)="event('focus')"> <label for="">Checkbox</label>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-6">
+            <input type="radio" value="option1" (change)="event('change1')" [(ngModel)]="options">
+            <label for="">option1</label>
+        </div>
+        <div class="col-6">
+            <input type="radio" value="option2" (change)="event('change2')" [(ngModel)]="options">
+            <label>option2</label>
+        </div>
+
+    </div>
+
+</div> -->
+
+<div class="container ">
+    <div class="row">
+        <div class="col-4 ">
+            <h4 class="text-center">Login</h4>
+            <label for="">Email Id/Username</label>
+            <div>
+                <input type="text" value="" (focus)="focusEvent1($event.target.value)" (focusout)="focusoutEvent1($event.target.value)" class="form-control" placeholder="Enter your active Email Id/Username">
+                <div *ngIf="value1==''&& eventFirst">
+                    <small class="text-danger">Please enter your Id/Username</small>
+                </div>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" value="" (focus)="focusEvent2($event.target.value)" (focusout)="focusoutEvent2($event.target.value)" class="form-control" placeholder="Enter the Password">
+                <div *ngIf="value2=='' && eventSecond">
+                    <small class="text-danger">Please enter your Password</small>
+                </div>
+                <small><a href="#">Forgot Passwords</a></small>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary text-center">Login</button>
+            </div>
+            <div class="text-center">
+                <small>Not a Member as yet? <span> <a href="#"> Register Now</a></span></small>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- (focus)="event1($event.target.value)"
+(focus)="event2($event.target.value)" -->
